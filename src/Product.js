@@ -1,22 +1,25 @@
 import React from "react";
 import "./Product.css";
 
-function Product() {
+function Product({ id, title, price, rating, image }) {
   return (
     <div>
       <div className="product">
         <div className="product__info">
-          <p>
-            Bennet Mystic 15.6 inch Laptop shoulder messenger sling office Bag.
-            Water Repellent Fabric for Men and Women (Blue)
+          <p>{title}</p>
+          <p className="product__price">
+            <small>$</small>
+            <strong>{price}</strong>
           </p>
-          <p className="product__price">30$</p>
-          <div className="product_rating">⭐⭐⭐⭐⭐</div>
+          <div className="product__rating">
+            {Array(rating)
+              .fill()
+              .map((_, i) => (
+                <p>⭐</p>
+              ))}
+          </div>
         </div>
-        <img
-          src="https://m.media-amazon.com/images/I/81HEC-PJkiL._AC_UY1100_.jpg"
-          alt=" bag"
-        />
+        <img src={image} />
         <button>Add to Basket</button>
       </div>
     </div>
