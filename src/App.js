@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./Header";
-import Checkout from "./Checkout";
-import Home from "./Home";
+import Header from "./components/Header/Header";
+import Checkout from "./pages/Checkout/Checkout";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
