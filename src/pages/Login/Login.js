@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import Storefront from "@mui/icons-material/Storefront";
+import { auth } from "../../Firebase"; // Import the auth instance from firebase.js
 import {
-  getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
@@ -12,8 +12,6 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const auth = getAuth();
 
   const signIn = (e) => {
     e.preventDefault();
