@@ -4,6 +4,7 @@ import Checkout from "./pages/Checkout/Checkout";
 import Home from "./pages/Home/Home";
 import { initialState, reducer } from "./reducer";
 import { StateProvider } from "./StateProvider";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/" element={<Home />} />
         </Routes>
