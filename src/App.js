@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import { initialState, reducer } from "./reducer";
 import { StateProvider } from "./StateProvider";
 import Login from "./pages/Login/Login";
+import process from "process";
+window.process = process;
 
 function App() {
   return (
